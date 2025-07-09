@@ -4,7 +4,7 @@ const resposta = document.getElementById("resposta")
 function calcular(){
 let numero1=prompt("Primeiro valor:");
 let numero2= prompt("Segundo valor");
-let operacao = prompt("O que iremos realizar?");
+let operacao = prompt("O que iremos realizar?[1]soma [2]subtracao [3]multiplicacao [4]divisao");
 
   numero1 = Number(numero1);
   numero2 = Number(numero2);
