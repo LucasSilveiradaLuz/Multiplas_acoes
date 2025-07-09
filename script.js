@@ -1,4 +1,3 @@
-
 const resposta = document.getElementById("resposta")
 
 function calcular(){
@@ -6,6 +5,12 @@ let numero1=prompt("Primeiro valor:");
 let numero2= prompt("Segundo valor");
 let operacao = prompt("O que iremos realizar?[1]soma [2]subtracao [3]multiplicacao [4]divisao");
 
+if (numero1 === null || numero1 === "" ||
+      numero2 === null || numero2 === "" ||
+      operacao === null || operacao === "") {
+    resposta.innerText = "Por favor, preencha todos os campos.";
+    return; 
+  }
   numero1 = Number(numero1);
   numero2 = Number(numero2);
 
@@ -13,7 +18,6 @@ let operacao = prompt("O que iremos realizar?[1]soma [2]subtracao [3]multiplicac
   let subtracao = numero1 - numero2
   let multiplicacao = numero1 * numero2
   let divisao = numero1 / numero2
-
 
   if(operacao.indexOf("soma") !== -1 || operacao.indexOf("1")!== -1){
       resposta.innerText = "O resultado é: "+ soma
@@ -26,15 +30,6 @@ let operacao = prompt("O que iremos realizar?[1]soma [2]subtracao [3]multiplicac
   }
    if(operacao.indexOf("divisao") !== -1 || operacao.indexOf("4")!== -1){
       resposta.innerText = "O resultado é: "+ divisao
+  }
+  }
 
-  }
-  if (numero1 !== null && numero1 !== "") {
-  return;
-}
-  if(numero2 !== null && numero2 !== ""){
-     return;
-  }
-  if(operacao !== null && operacao !== ""){
-     return;
-  }
-}
